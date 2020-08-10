@@ -1,0 +1,18 @@
+set number
+set nocompatible
+syntax on
+set showmode
+set showcmd
+set encoding=utf-8
+set autoindent
+set tabstop=4
+set wrap
+set linebreak
+set  ruler
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
+inoremap < <><ESC>i
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+set backspace=2

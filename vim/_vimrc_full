@@ -1,0 +1,105 @@
+# vim官网 https://www.vim.org/
+# 官方帮助文档 https://vimhelp.org/ 中文 http://vimcdoc.sourceforge.net/doc/help.html
+# linux下配置文件优先级 
+# Windows下配置文件优先级 $HOME/_vimrc，$HOME/.vimrc，$HOME/vimfiles/vimrc，$VIM/_vimrc，$VIM/.vimrc，$VIM/vim**/vimrc
+# 使用指定配置文件 vim -u filename 显示当前配置文件 :echo $MYVIMRC
+
+# 配置规则
+# 行号为例 打开 set number 关闭 set nonumber 查询 :set number? 查看帮助 :help number
+set number
+
+# 基础配置
+# 不与vi兼容
+set nocompatible
+# 语法高亮
+syntax on
+# 底部模式显示
+set showmode
+# 底部命令显示
+set showcmd
+# 支持使用鼠标
+# set mouse=a
+# 使用UTF8编码
+set encoding=utf-8
+# 启用256色
+# set t_Co=256
+# 开启文件类型检查
+# filetype indent on
+
+# 缩进
+# 回车自动缩进
+set autoindent
+# tab缩进
+set tabstop=4
+# >>缩进
+# set shiftwidth=4
+# tab转为空格
+# set expandtab
+# tab转为几个空格
+# set softtabstop=2
+
+# 外观
+# 显示行号
+# set number
+# 显示光标所在行号 
+# set relativenumber
+# 光标所在行高亮
+# set cursorline
+# 行宽
+# set textwidth=80
+# 自动折行
+set wrap
+# 禁止在单词内部折行
+set linebreak
+# 折行除与右边缘之间字符数量
+# set wrapmargin=2
+# 垂直滚动光标距离
+# set sidescrolloff=15
+# 水平滚动光标距离 不折行使用
+# set laststatus=2
+# 是否显示状态栏 0 表示不显示，1 表示只在多窗口时显示，2 表示显示。
+# set laststatus=2
+# 在状态栏显示光标的当前位置
+set  ruler
+
+# 搜索
+# 自动匹配括号
+# set showmatch
+# 高亮显示匹配
+# set hlsearch
+# 自动跳转匹配
+# set incsearch
+# 忽略大小写
+# set ignorecase
+# 在敏感模式下 只有一个大写的字母敏感
+# set smartcase
+
+# 编辑
+# 打开英语单词的拼写检查。
+# set spell spelllang=en_us
+# 关闭文件备份
+# set nobackup
+# 关闭交换文件
+# set noswapfile
+# 保留撤销历史
+# set undofile
+
+# 设置 备份文件 交换文件 操作历史文件的保存位置
+# set backupdir=~/.vim/.backup//  
+# set directory=~/.vim/.swp//
+# set undodir=~/.vim/.undo// 
+# 自动切换工作目录
+# set autochdir
+
+
+# 自动补全括号
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {}<ESC>i
+inoremap < <><ESC>i
+# 引号自动补全
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+
+# 设置删除模式
+set backspace=2
